@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convite Barbie</title>
+  <style>
+    body {
+      background-color: #E0218A;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      color: white;
+      margin-top: 150px;
+      font-size: 30px;
+    }
+    
+    .buttons {
+      margin-top: 50px;
+    }
+    
+    .button {
+      display: inline-block;
+      background-color: white;
+      color: #E0218A;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    
+     
+  </style>
+</head>
+<body>
+  <h1>Stefani, quer assistir Barbie comigo?</h1>
+  
+  <div class="buttons">
+    <button class="button" onclick="openWhatsApp()">Sim</button>
+    <button class="button" id="noButton" onmouseover="teleportButton()">Não</button>
+  </div>
+
+  <script>
+    function openWhatsApp() {
+      window.open("https://wa.me/5515996779007?text=Sim%20du%20ar%20du%2C%20quero%20ir%20no%20ci%20ne%20mar%20ver%20o%20riam%20gos%20lim%20gue");
+    }
+
+    function teleportButton() {
+      var button = document.getElementById("noButton");
+      var randomX = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+      var randomY = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+      button.style.position = "absolute";
+      button.style.left = randomX + "px";
+      button.style.top = randomY + "px";
+    }
+  </script>
+</body>
+</html>
